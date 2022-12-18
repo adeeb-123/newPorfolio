@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@200&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.hiLightTxt {
+    color: #14cf93;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}
+
+
+#main {
+    width: 100%;
+}
+
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    color: #fff;
+}
+
+#loader #topheading {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#topheading h5 {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+
+}
+
+#loader h1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2vw;
+    font-weight: 400;
+    word-spacing: 5px;
+    /* background-color: red; */
+}
+
+.reveal .parent {
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.reveal .parent .child {
+    display: block;
+}
+
+.parent .child span {
+    display: inline-block;
+}
+
+#green {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0vh;
+    background-color: #14cf93;
+}
+
+
+#home {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0vh;
+    /* background-color: #dadada; */
+    background-color: #fcfaf8;
+}
+
+#home #nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vw 5vw;
+
+    width: 100%;
+    height: 100px;
+    /* background-color: red; */
+}
+
+#nav a {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8vw;
+    color: #000;
+    font-weight: 600;
+}
+
+#nav a .line {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    height: 1px;
+    background-color: #000;
+}
+
+#line1 {
+    left: 0;
+    width: 0%;
+    transition: width cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    transition-delay: 0.1s;
+}
+
+#line2 {
+    right: 0;
+    width: 100%;
+    transition: width cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+#nav a:hover #line2 {
+    width: 0%;
+}
+
+#nav a:hover #line1 {
+    width: 100%;
+}
+
+.row {
+    margin-top: 3vw;
+    /* margin-top: 10vh; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: #333;
+    padding: 0 7vw;
+    line-height: 1.3;
+    padding-right: 12vw;
+}
+
+.row h1 {
+    font-size: 12vw;
+    font-weight: 700;
+}
+
+.row .text {
+    margin-top: 1vw;
+}
+
+.row h5 {
+    opacity: 0.6;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.row:nth-child(3) {
+    margin-top: 0;
+}
+
+.row svg {
+    height: 8vw;
+    margin: 0 2vw;
+}
+
+path,
+polyline {
+    stroke: #14cf93;
+}
+
+#imagery {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20vw;
+    width: 100%;
+    padding: 5vw 7vw;
+    z-index: 99;
+
+}
+
+#imagery #imgleft {
+    width: 30%;
+    height: auto;
+}
+
+#imgleft h1 {
+    letter-spacing: 1px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 2vw;
+    color: #333;
+}
+
+#imgleft h1 span {
+    color: #14cf93;
+    font-family: cursive;
+    font-style: italic;
+    font-weight: 600;
+}
+
+#imgright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+    width: 60%;
+    height: 300px;
+    /* background-color: yellow; */
+}
+
+#imgright .imgContainer {
+    position: absolute;
+    width: 27vw;
+    height: 40vw;
+    border-radius: 1vw;
+    filter: grayscale();
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+#imgright .imgContainer:hover {
+    filter: grayscale(0);
+}
+
+#imgright .imgContainer:nth-child(1) {
+    transform: translate(-30%, -8%) rotate(-15deg);
+    background-image: url(https://cdn.pixabay.com/photo/2019/05/20/12/20/man-4216529_960_720.jpg);
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+#imgright .imgContainer:nth-child(2) {
+    transform: translate(0%, 5%) rotate(-10deg);
+    background-color: blue;
+    background-image: url(https://images.unsplash.com/photo-1591258739299-5b65d5cbb235?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80);
+    background-position: center;
+    background-size: cover;
+
+}
+
+#imgright .imgContainer:nth-child(3) {
+    transform: translate(20%, 20%) rotate(-5deg);
+    /* background-image: url(https://images.pexels.com/photos/2915216/pexels-photo-2915216.jpeg); */
+    background-image: url(./myImg.JPG);
+    background-position: center;
+    background-size: cover;
+}
+
+#work {
+    padding-top: 25vw;
+    position: relative;
+    width: 100%;
+    min-height: 70vh;
+    background-color: #F2F2F2;
+}
+
+#work::before {
+    content: "";
+    position: absolute;
+    top: -75px;
+    width: 100%;
+    height: 150px;
+    transform: rotate(-180deg);
+    background-image: url(https://abhishekjha.me/rip.f6d7c4dd.svg);
+    background-size: cover;
+}
+
+#work .workrow {
+    padding: 0 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.workrow h1 {
+    display: flex;
+    align-items: baseline;
+    font-size: 7vw;
+    font-weight: 900;
+}
+
+.workrow h1 .mini {
+    font-size: 1.2vw;
+    font-weight: 800;
+    margin-left: 2vw;
+
+}
+
+.o-ui-arrow {
+    width: 5vw;
+    transform: rotate(90deg);
+}
+
+.o-ui-arrow path {
+    stroke: rgb(158, 158, 158);
+}
+
+#work #images {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-top: 5vw;
+    width: 100%;
+    position: relative;
+    padding: 0 5vw;
+}
+
+#work #images .container {
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.container img {
+    width: 105%;
+}
+
+.container1 {
+    width: 50%;
+}
+.container2 {
+    width: 28%;
+}
